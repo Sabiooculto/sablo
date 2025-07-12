@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALGORITMO DOURADO - Domine o Instagram em 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      background-color: #0f0f0f;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #FFD700;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      background: linear-gradient(90deg, #0a0a0a 60%, #121212);
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .hero-text h1 span {
+      color: #FFD700;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      color: #cccccc;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #D4AF37, #FFD700);
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 15px #D4AF37;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(90deg, #C5A100, #FFD700);
+      box-shadow: 0 0 25px #C5A100;
+      transform: scale(1.03);
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #111;
+      color: #FFD700;
+      font-weight: 600;
+    }
+
+    .countdown span {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 0 5px;
+    }
+
+    .pain-section {
+      position: relative;
+      background: url('IMAGENS/SABIO1') center center / cover no-repeat;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .pain-overlay {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 60px 20px;
+    }
+
+    .pain-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pain-title h2 {
+      font-size: 28px;
+      line-height: 1.4;
+      color: #FFD700;
+      margin-bottom: 30px;
+    }
+
+    .pain-list {
+      list-style: none;
+      padding: 0;
+      color: #eaeaea;
+      display: inline-block;
+      text-align: left;
+    }
+
+    .pain-list li {
+      font-size: 18px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .pain-list li:before {
+      content: "✖";
+      color: #ff3333;
+      position: absolute;
+      left: 0;
+    }
+
+    .solution-section {
+      padding: 60px 20px;
+      background-color: #121212;
+    }
+
+    .solution-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .solution-title h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #FFD700;
+    }
+
+    .solution-features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 30px;
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .feature-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .feature-desc {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .offer-section {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    }
+
+    .offer-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      padding: 40px;
+      border-radius: 15px;
+      background: rgba(26, 26, 26, 0.7);
+      border: 1px solid #D4AF37;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+    }
+
+    .offer-title {
+      margin-bottom: 30px;
+    }
+
+    .offer-title h2 {
+      font-size: 26px;
+      color: #FFD700;
+    }
+
+    .bonus-list {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .bonus-list li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+      color: #ddd;
+    }
+
+    .bonus-list li:before {
+      content: "🎁";
+      position: absolute;
+      left: 0;
+      color: #FFD700;
+    }
+
+    .price-container {
+      margin: 30px 0;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 20px;
+    }
+
+    .current-price {
+      font-size: 42px;
+      font-weight: bold;
+      color: #FFD700;
+      margin: 10px 0;
+    }
+
+    .guarantee {
+      color: #ccc;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .testimonial-section {
+      padding: 60px 20px;
+      background-color: #0e0e0e;
+    }
+
+    .testimonial-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-title h2 {
+      font-size: 28px;
+      color: #FFD700;
+    }
+
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .testimonial-card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 340px;
+      border: 1px solid #333;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .faq-section {
+      padding: 60px 20px;
+      background-color: #121212;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-title h2 {
+      font-size: 28px;
+      color: #FFD700;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 20px;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .final-cta {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+
+    .final-cta h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #FFD700;
+    }
+
+    .final-cta p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 40px 20px;
+        flex-direction: column;
+      }
+
+      .hero-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .hero-image {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .countdown {
+        padding: 15px;
+      }
+
+      .countdown span {
+        font-size: 18px;
+      }
+
+      .feature-box {
+        min-width: 100%;
+      }
+
+      .offer-container {
+        padding: 30px 20px;
+      }
+
+      .current-price {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <strong>ATENÇÃO:</strong> Esta página será retirada do ar em breve. Aproveite enquanto ainda pode acessar o método proibido.
+  </div>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1><span>ALGORITMO DOURADO</span><br>O Método PROIBIDO Que Faz o Instagram te MOSTRAR Para 1 Milhão de Pessoas em 2025</h1>
+      <p><strong>Mesmo Que Você Tenha 0 Seguidores</strong></p>
+      <p>Descubra as estratégias científicas que grandes criadores escondem para você não virar concorrência. Validadas por 537 contas que cresceram de 0 a 100K em 30 dias.</p>
+      <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO DOMINAR O ALGORITMO AGORA</a>
+    </div>
+    <div class="hero-image">
+      <img src="IMAGENS/SABIO2" alt="Algoritmo Dourado">
+    </div>
+  </div>
+
+  <div class="countdown">
+    <span id="days">00</span> dias 
+    <span id="hours">00</span> hrs 
+    <span id="minutes">00</span> min 
+    <span id="seconds">00</span> seg
+  </div>
+
+  <div class="pain-section">
+    <div class="pain-overlay">
+      <div class="pain-container">
+        <div class="pain-title">
+          <h2>Se Você Está Fazendo Isso, o Instagram Está ENTERRANDO Seu Conteúdo em 2025</h2>
+        </div>
+        <ul class="pain-list">
+          <li>Seus Reels não passam de <strong>500 visualizações</strong>?</li>
+          <li>Seus Stories têm <strong>menos de 5% de taxa de retenção</strong>?</li>
+          <li>Você acha que <strong>só quem paga anúncios cresce</strong>?</li>
+          <li>Seu conteúdo some do feed após algumas horas?</li>
+          <li>Você não sabe quais hashtags realmente funcionam em 2025?</li>
+        </ul>
+        <p style="margin-top: 30px; color: #FFD700; font-weight: bold;">O Algoritmo MUDOU... E Quem Não Se Adaptar Vai Sumir!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="solution-section">
+    <div class="solution-container">
+      <div class="solution-title">
+        <h2>Conheça o <span>ALGORITMO DOURADO</span><br>O Sistema Que Faz Seu Instagram EXPLODIR Sem Anúncios</h2>
+      </div>
+      <div class="solution-features">
+        <div class="feature-box">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-title">Fórmula Secreta</div>
+          <div class="feature-desc">Reels que viralizam em 72h usando gatilhos que o Instagram prioriza</div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">🚫</div>
+          <div class="feature-title">Erros Fatais</div>
+          <div class="feature-desc">Os 3 erros que 99% dos criadores cometem (e como evitá-los)</div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon">👑</div>
+          <div class="feature-title">Truque do Ouro</div>
+          <div class="feature-desc">Como fazer o Instagram priorizar seu conteúdo automaticamente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offer-section" id="offer">
+    <div class="offer-container">
+      <div class="offer-title">
+        <h2>TUDO O QUE VOCÊ RECEBE HOJE:</h2>
+      </div>
+      <ul class="bonus-list">
+        <li><strong>Ebook "ALGORITMO DOURADO"</strong> (6 Capítulos com estratégias atualizadas para 2025)</li>
+        <li><strong>Planilhas Prontas:</strong> Calendário de Postagens e Análise de Concorrentes</li>
+        <li><strong>Acesso ao Grupo VIP:</strong> Suporte direto com especialistas</li>
+        <li><strong>BÔNUS:</strong> Checklist "7 Passos Para Virar Prioridade do Algoritmo"</li>
+      </ul>
+      <div class="price-container">
+        <div class="original-price">De R$107,00</div>
+        <div class="current-price">Por apenas R$19,77</div>
+        <div class="guarantee">OU 12x de R$9,74 no cartão</div>
+      </div>
+      <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO MEU ACESSO IMEDIATO</a>
+      <div class="guarantee">
+        <strong>7 Dias de Garantia Incondicional</strong><br>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-section">
+    <div class="testimonial-container">
+      <div class="testimonial-title">
+        <h2>O Que Quem Comprou Está Dizendo:</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">"Em 3 semanas usando o método, meus Reels saltaram de 200 para 15k views. Finalmente entendi como o algoritmo funciona!"</div>
+          <div class="testimonial-author">- Carla S., 23k seguidores</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"As estratégias de capítulo 3 mudaram tudo! Meu CTR aumentou 300% seguindo as dicas de primeiros segundos."</div>
+          <div class="testimonial-author">- Marcos R., Afiliado Digital</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">"Comprei vários cursos antes, mas esse foi o único que mostrou exatamente o que fazer em 2025. Valeu cada centavo!"</div>
+          <div class="testimonial-author">- Juliana T., Microempreendedora</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <div class="faq-container">
+      <div class="faq-title">
+        <h2>Perguntas Frequentes</h2>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Preciso ter muitos seguidores para aplicar?</div>
+        <div class="faq-answer">Não! O método foi testado em contas desde 0 seguidores. O algoritmo trata todos igualmente nos primeiros minutos - é aí que agimos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Quanto tempo leva para ver resultados?</div>
+        <div class="faq-answer">A maioria vê aumento nas visualizações em 7-14 dias. Casos extremos (como os do grupo VIP) viralizaram em 72h.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Preciso aparecer nos vídeos?</div>
+        <div class="faq-answer">Não! 60% dos alunos usam métodos "faceless" (sem rosto) com ótimos resultados.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Como recebo o acesso?</div>
+        <div class="faq-answer">Imediatamente após a compra você recebe um e-mail com todos os materiais em PDF + links para os bônus.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="final-cta">
+    <h2>O Instagram Não Quer Que Você Saiba Disso...</h2>
+    <p>Mas enquanto esta página estiver no ar, você pode acessar o método completo que transformou contas comuns em máquinas de visualizações e vendas.</p>
+    <p><strong>ÚLTIMAS VAGAS DISPONÍVEIS!</strong></p>
+    <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO DOMINAR O ALGORITMO AGORA</a>
+    <p style="margin-top: 20px; font-size: 12px; color: #777;">© 2025 Algoritmo Dourado. Todos os direitos reservados.<br>Este produto não é afiliado ao Instagram ou Meta.</p>
+  </div>
+
+  <script>
+    // Defina a data final da contagem regressiva (5 dias a partir de agora)
+    const countDownDate = new Date().getTime() + (5 * 24 * 60 * 60 * 1000);
+
+    // Atualiza o cronômetro a cada 1 segundo
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      // Cálculos de tempo
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Formatação
+      const formatTime = (time) => time < 10 ? `0${time}` : time;
+
+      // Exibe o resultado
+      document.getElementById("days").innerText = formatTime(days);
+      document.getElementById("hours").innerText = formatTime(hours);
+      document.getElementById("minutes").innerText = formatTime(minutes);
+      document.getElementById("seconds").innerText = formatTime(seconds);
+
+      // Se a contagem regressiva terminar
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".countdown").innerHTML = "<span>OFERTA ENCERRADA</span>";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
