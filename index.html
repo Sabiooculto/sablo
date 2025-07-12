@@ -28,22 +28,23 @@
 
     .hero {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 60px 40px;
+      padding: 40px 20px;
       background: linear-gradient(90deg, #0a0a0a 60%, #121212);
+      text-align: center;
     }
 
-    .hero-text {
-      flex: 1;
-      max-width: 600px;
+    .hero-content {
+      max-width: 800px;
+      width: 100%;
     }
 
     .hero-text h1 {
-      font-size: 38px;
-      margin-bottom: 20px;
+      font-size: 32px;
+      margin-bottom: 15px;
       color: #ffffff;
+      line-height: 1.3;
     }
 
     .hero-text h1 span {
@@ -51,16 +52,16 @@
     }
 
     .hero-text p {
-      font-size: 17px;
+      font-size: 16px;
       color: #cccccc;
-      margin-bottom: 30px;
-      line-height: 1.6;
+      margin-bottom: 25px;
+      line-height: 1.5;
     }
 
     .cta-button {
       background: linear-gradient(90deg, #D4AF37, #FFD700);
       color: #000;
-      padding: 15px 30px;
+      padding: 12px 25px;
       border: none;
       border-radius: 6px;
       font-size: 16px;
@@ -70,6 +71,7 @@
       display: inline-block;
       box-shadow: 0 0 15px #D4AF37;
       transition: all 0.3s ease;
+      margin: 10px 0;
     }
 
     .cta-button:hover {
@@ -79,9 +81,9 @@
     }
 
     .hero-image {
-      flex: 1;
       max-width: 500px;
-      padding: 20px;
+      width: 100%;
+      margin: 20px auto;
     }
 
     .hero-image img {
@@ -94,7 +96,7 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
-      padding: 20px;
+      padding: 15px;
       background-color: #111;
       color: #FFD700;
       font-weight: 600;
@@ -110,25 +112,25 @@
       position: relative;
       background: url('image1.png') center center / cover no-repeat;
       color: white;
-      padding: 80px 20px;
+      padding: 40px 20px;
     }
 
     .pain-overlay {
       background: rgba(0, 0, 0, 0.85);
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
 
     .pain-container {
-      max-width: 1100px;
+      max-width: 800px;
       margin: 0 auto;
       text-align: center;
     }
 
     .pain-title h2 {
-      font-size: 28px;
-      line-height: 1.4;
+      font-size: 24px;
+      line-height: 1.3;
       color: #FFD700;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .pain-list {
@@ -137,11 +139,12 @@
       color: #eaeaea;
       display: inline-block;
       text-align: left;
+      max-width: 600px;
     }
 
     .pain-list li {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 16px;
+      margin-bottom: 15px;
       position: relative;
       padding-left: 30px;
     }
@@ -154,19 +157,19 @@
     }
 
     .solution-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       background-color: #121212;
     }
 
     .solution-container {
-      max-width: 1100px;
+      max-width: 800px;
       margin: 0 auto;
       text-align: center;
     }
 
     .solution-title h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
+      font-size: 24px;
+      margin-bottom: 25px;
       color: #FFD700;
     }
 
@@ -174,14 +177,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
+      gap: 20px;
+      margin-top: 30px;
     }
 
     .feature-box {
       background: #1a1a1a;
       border-radius: 10px;
-      padding: 30px;
+      padding: 20px;
       flex: 1;
       min-width: 250px;
       max-width: 300px;
@@ -195,24 +198,24 @@
     }
 
     .feature-icon {
-      font-size: 40px;
+      font-size: 35px;
       color: #FFD700;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .feature-title {
-      font-size: 20px;
-      margin-bottom: 15px;
+      font-size: 18px;
+      margin-bottom: 10px;
       color: #fff;
     }
 
     .feature-desc {
       color: #ccc;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .offer-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
     }
 
@@ -221,7 +224,7 @@
       margin: 0 auto;
       text-align: center;
       position: relative;
-      padding: 40px;
+      padding: 30px;
       border-radius: 15px;
       background: rgba(26, 26, 26, 0.7);
       border: 1px solid #D4AF37;
@@ -229,27 +232,29 @@
     }
 
     .offer-title {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .offer-title h2 {
-      font-size: 26px;
+      font-size: 24px;
       color: #FFD700;
     }
 
     .bonus-list {
       list-style: none;
       padding: 0;
-      margin: 30px 0;
+      margin: 20px 0;
       text-align: left;
       display: inline-block;
+      max-width: 500px;
     }
 
     .bonus-list li {
-      margin-bottom: 15px;
-      padding-left: 30px;
+      margin-bottom: 12px;
+      padding-left: 25px;
       position: relative;
       color: #ddd;
+      font-size: 15px;
     }
 
     .bonus-list li:before {
@@ -260,17 +265,17 @@
     }
 
     .price-container {
-      margin: 30px 0;
+      margin: 25px 0;
     }
 
     .original-price {
       text-decoration: line-through;
       color: #999;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .current-price {
-      font-size: 42px;
+      font-size: 36px;
       font-weight: bold;
       color: #FFD700;
       margin: 10px 0;
@@ -279,144 +284,123 @@
     .guarantee {
       color: #ccc;
       font-size: 14px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .testimonial-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       background-color: #0e0e0e;
     }
 
     .testimonial-container {
-      max-width: 1100px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .testimonial-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .testimonial-title h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #FFD700;
     }
 
     .testimonial-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
     }
 
     .testimonial-card {
       background: #1a1a1a;
-      padding: 25px;
+      padding: 20px;
       border-radius: 10px;
       flex: 1;
-      min-width: 300px;
-      max-width: 340px;
+      min-width: 250px;
+      max-width: 300px;
       border: 1px solid #333;
     }
 
     .testimonial-text {
       font-style: italic;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       color: #ddd;
+      font-size: 14px;
     }
 
     .testimonial-author {
       font-weight: bold;
       color: #FFD700;
+      font-size: 14px;
     }
 
     .faq-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       background-color: #121212;
     }
 
     .faq-container {
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     .faq-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .faq-title h2 {
-      font-size: 28px;
+      font-size: 24px;
       color: #FFD700;
     }
 
     .faq-item {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       border-bottom: 1px solid #333;
-      padding-bottom: 20px;
+      padding-bottom: 15px;
     }
 
     .faq-question {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 16px;
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       cursor: pointer;
     }
 
     .faq-answer {
       color: #ccc;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .final-cta {
-      padding: 60px 20px;
+      padding: 40px 20px;
       text-align: center;
       background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     }
 
     .final-cta h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 15px;
       color: #FFD700;
     }
 
     .final-cta p {
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 0 auto 20px;
       color: #ccc;
-      font-size: 17px;
+      font-size: 16px;
     }
 
     /* ========================================= */
     /* AJUSTES ESPECÍFICOS PARA MOBILE (<=768px) */
     /* ========================================= */
     @media (max-width: 768px) {
-      /* Layout geral */
-      .hero,
-      .pain-section,
-      .solution-section,
-      .offer-section,
-      .testimonial-section,
-      .faq-section,
-      .final-cta {
-        padding: 30px 15px;
-      }
-
-      /* Centralização reforçada */
-      .hero-text,
-      .pain-container,
-      .solution-container,
-      .offer-container,
-      .testimonial-container,
-      .faq-container {
-        text-align: center;
-      }
-
-      /* Ajustes de tamanho de fonte */
       .hero-text h1 {
         font-size: 24px;
-        line-height: 1.3;
       }
       
       .hero-text p,
@@ -433,43 +417,22 @@
       .feature-title,
       .bonus-list li,
       .faq-question {
-        font-size: 16px;
+        font-size: 15px;
       }
       
       .feature-desc,
       .faq-answer,
       .final-cta p,
       .guarantee {
-        font-size: 14px;
+        font-size: 13px;
       }
       
       .current-price {
         font-size: 28px;
       }
 
-      /* Ajustes específicos para listas */
-      .pain-list,
-      .bonus-list {
-        display: block;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 90%;
-      }
-
-      /* Espaçamentos em elementos */
       .feature-box {
-        padding: 20px 15px;
         min-width: 100%;
-      }
-
-      .hero-image {
-        max-width: 100%;
-        padding: 10px 0;
-      }
-
-      .countdown {
-        padding: 15px;
       }
 
       .countdown span {
@@ -485,14 +448,15 @@
   </div>
 
   <div class="hero">
-    <div class="hero-text">
-      <h1><span>ALGORITMO DOURADO</span><br>O Método PROIBIDO Que Faz o Instagram te MOSTRAR Para 1 Milhão de Pessoas em 2025</h1>
-      <p><strong>Mesmo Que Você Tenha 0 Seguidores</strong></p>
-      <p>Descubra as estratégias científicas que grandes criadores escondem para você não virar concorrência. Validadas por 537 contas que cresceram de 0 a 100K em 30 dias.</p>
-      <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO DOMINAR O ALGORITMO AGORA</a>
-    </div>
-    <div class="hero-image">
-      <img src="image2.png" alt="Algoritmo Dourado">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1><span>ALGORITMO DOURADO</span><br>O Método PROIBIDO Para o Instagram em 2025</h1>
+        <p>Domine o algoritmo e alcance 1 milhão de pessoas mesmo começando do zero</p>
+        <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO DOMINAR O ALGORITMO AGORA</a>
+      </div>
+      <div class="hero-image">
+        <img src="image2.png" alt="Algoritmo Dourado">
+      </div>
     </div>
   </div>
 
@@ -507,16 +471,15 @@
     <div class="pain-overlay">
       <div class="pain-container">
         <div class="pain-title">
-          <h2>Se Você Está Fazendo Isso, o Instagram Está ENTERRANDO Seu Conteúdo em 2025</h2>
+          <h2>Se Você Está Fazendo Isso, o Instagram Está ENTERRANDO Seu Conteúdo</h2>
         </div>
         <ul class="pain-list">
-          <li>Seus Reels não passam de <strong>500 visualizações</strong>?</li>
-          <li>Seus Stories têm <strong>menos de 5% de taxa de retenção</strong>?</li>
-          <li>Você acha que <strong>só quem paga anúncios cresce</strong>?</li>
-          <li>Seu conteúdo some do feed após algumas horas?</li>
-          <li>Você não sabe quais hashtags realmente funcionam em 2025?</li>
+          <li>Reels com menos de 500 visualizações</li>
+          <li>Stories com baixa retenção</li>
+          <li>Conteúdo que some do feed rápido</li>
+          <li>Hashtags que não funcionam mais</li>
         </ul>
-        <p style="margin-top: 30px; color: #FFD700; font-weight: bold;">O Algoritmo MUDOU... E Quem Não Se Adaptar Vai Sumir!</p>
+        <p style="margin-top: 20px; color: #FFD700; font-weight: bold;">O Algoritmo MUDOU em 2025!</p>
       </div>
     </div>
   </div>
@@ -524,23 +487,23 @@
   <div class="solution-section">
     <div class="solution-container">
       <div class="solution-title">
-        <h2>Conheça o <span>ALGORITMO DOURADO</span><br>O Sistema Que Faz Seu Instagram EXPLODIR Sem Anúncios</h2>
+        <h2>Conheça o <span>ALGORITMO DOURADO</span></h2>
       </div>
       <div class="solution-features">
         <div class="feature-box">
           <div class="feature-icon">🔍</div>
           <div class="feature-title">Fórmula Secreta</div>
-          <div class="feature-desc">Reels que viralizam em 72h usando gatilhos que o Instagram prioriza</div>
+          <div class="feature-desc">Reels que viralizam usando gatilhos que o Instagram prioriza</div>
         </div>
         <div class="feature-box">
           <div class="feature-icon">🚫</div>
           <div class="feature-title">Erros Fatais</div>
-          <div class="feature-desc">Os 3 erros que 99% dos criadores cometem (e como evitá-los)</div>
+          <div class="feature-desc">Os 3 erros que 99% dos criadores cometem</div>
         </div>
         <div class="feature-box">
           <div class="feature-icon">👑</div>
           <div class="feature-title">Truque do Ouro</div>
-          <div class="feature-desc">Como fazer o Instagram priorizar seu conteúdo automaticamente</div>
+          <div class="feature-desc">Faça o Instagram priorizar seu conteúdo</div>
         </div>
       </div>
     </div>
@@ -549,13 +512,13 @@
   <div class="offer-section" id="offer">
     <div class="offer-container">
       <div class="offer-title">
-        <h2>TUDO O QUE VOCÊ RECEBE HOJE:</h2>
+        <h2>TUDO O QUE VOCÊ RECEBE:</h2>
       </div>
       <ul class="bonus-list">
-        <li><strong>Ebook "ALGORITMO DOURADO"</strong> (6 Capítulos com estratégias atualizadas para 2025)</li>
-        <li><strong>Planilhas Prontas:</strong> Calendário de Postagens e Análise de Concorrentes</li>
-        <li><strong>Acesso ao Grupo VIP:</strong> Suporte direto com especialistas</li>
-        <li><strong>BÔNUS:</strong> Checklist "7 Passos Para Virar Prioridade do Algoritmo"</li>
+        <li><strong>Ebook "ALGORITMO DOURADO"</strong> (Estratégias atualizadas para 2025)</li>
+        <li><strong>Planilhas Prontas</strong> para análise e planejamento</li>
+        <li><strong>Acesso ao Grupo VIP</strong> com suporte especializado</li>
+        <li><strong>BÔNUS:</strong> Checklist exclusivo</li>
       </ul>
       <div class="price-container">
         <div class="original-price">De R$107,00</div>
@@ -564,8 +527,8 @@
       </div>
       <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO MEU ACESSO IMEDIATO</a>
       <div class="guarantee">
-        <strong>7 Dias de Garantia Incondicional</strong><br>
-        Se não gostar, devolvemos seu dinheiro sem perguntas
+        <strong>7 Dias de Garantia</strong><br>
+        Devolução sem perguntas
       </div>
     </div>
   </div>
@@ -577,16 +540,16 @@
       </div>
       <div class="testimonial-grid">
         <div class="testimonial-card">
-          <div class="testimonial-text">"Em 3 semanas usando o método, meus Reels saltaram de 200 para 15k views. Finalmente entendi como o algoritmo funciona!"</div>
+          <div class="testimonial-text">"Em 3 semanas usando o método, meus Reels saltaram de 200 para 15k views!"</div>
           <div class="testimonial-author">- Carla S., 23k seguidores</div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-text">"As estratégias de capítulo 3 mudaram tudo! Meu CTR aumentou 300% seguindo as dicas de primeiros segundos."</div>
-          <div class="testimonial-author">- Marcos R., Afiliado Digital</div>
+          <div class="testimonial-text">"As estratégias do capítulo 3 mudaram tudo! Meu CTR aumentou 300%"</div>
+          <div class="testimonial-author">- Marcos R., Afiliado</div>
         </div>
         <div class="testimonial-card">
-          <div class="testimonial-text">"Comprei vários cursos antes, mas esse foi o único que mostrou exatamente o que fazer em 2025. Valeu cada centavo!"</div>
-          <div class="testimonial-author">- Juliana T., Microempreendedora</div>
+          <div class="testimonial-text">"O único curso que mostrou exatamente o que fazer em 2025"</div>
+          <div class="testimonial-author">- Juliana T., Empreendedora</div>
         </div>
       </div>
     </div>
@@ -598,30 +561,25 @@
         <h2>Perguntas Frequentes</h2>
       </div>
       <div class="faq-item">
-        <div class="faq-question">Preciso ter muitos seguidores para aplicar?</div>
-        <div class="faq-answer">Não! O método foi testado em contas desde 0 seguidores. O algoritmo trata todos igualmente nos primeiros minutos - é aí que agimos.</div>
+        <div class="faq-question">Preciso ter muitos seguidores?</div>
+        <div class="faq-answer">Não! Funciona mesmo começando do zero.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-question">Quanto tempo leva para ver resultados?</div>
-        <div class="faq-answer">A maioria vê aumento nas visualizações em 7-14 dias. Casos extremos (como os do grupo VIP) viralizaram em 72h.</div>
+        <div class="faq-question">Quanto tempo para ver resultados?</div>
+        <div class="faq-answer">A maioria vê aumento em 7-14 dias.</div>
       </div>
       <div class="faq-item">
         <div class="faq-question">Preciso aparecer nos vídeos?</div>
-        <div class="faq-answer">Não! 60% dos alunos usam métodos "faceless" (sem rosto) com ótimos resultados.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Como recebo o acesso?</div>
-        <div class="faq-answer">Imediatamente após a compra você recebe um e-mail com todos os materiais em PDF + links para os bônus.</div>
+        <div class="faq-answer">Não! Métodos "faceless" funcionam bem.</div>
       </div>
     </div>
   </div>
 
   <div class="final-cta">
-    <h2>O Instagram Não Quer Que Você Saiba Disso...</h2>
-    <p>Mas enquanto esta página estiver no ar, você pode acessar o método completo que transformou contas comuns em máquinas de visualizações e vendas.</p>
-    <p><strong>ÚLTIMAS VAGAS DISPONÍVEIS!</strong></p>
+    <h2>O Instagram Não Quer Que Você Saiba Disso</h2>
+    <p>Acesse o método completo que transformou contas comuns em máquinas de visualizações.</p>
     <a href="https://mpago.la/25SCnYr" class="cta-button">QUERO DOMINAR O ALGORITMO AGORA</a>
-    <p style="margin-top: 20px; font-size: 12px; color: #777;">© 2025 Algoritmo Dourado. Todos os direitos reservados.<br>Este produto não é afiliado ao Instagram ou Meta.</p>
+    <p style="margin-top: 20px; font-size: 12px; color: #777;">© 2025 Algoritmo Dourado. Todos os direitos reservados.</p>
   </div>
 
   <script>
